@@ -9,7 +9,7 @@ library(sf)
 sf_use_s2(FALSE)
 
 # Set the file path to your GeoTIFF
-file_path <- "C:/Users/emili/Documents/UniNE/Master/SemestrePrintemps/BiodiversityDataAnalysis/Project/Data/WorldEcosystem.tif"
+file_path <- "Data/WorldEcosystem.tif"
 
 # Read the raster GeoTIFF
 ecosystem_raster <- raster(file_path)
@@ -32,7 +32,7 @@ matrix_full_elev$eco_values <- eco_values
 ##################################################################################################################################
 ##################################################################################################################################
 # metadata
-metadat_eco <- read.delim("C:/Users/emili/Documents/UniNE/Master/SemestrePrintemps/BiodiversityDataAnalysis/Project/Data/WorldEcosystem.metadata.tsv")
+metadat_eco <- read.delim("Data/WorldEcosystem.metadata.tsv")
 
 # Transform ecosystem "code" into ecosystem "name"
 matrix_full_elev_eco <- merge(matrix_full_elev, metadat_eco, by.x="eco_values", by.y="Value", all.x =T)

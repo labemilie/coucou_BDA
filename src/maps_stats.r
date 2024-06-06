@@ -254,7 +254,6 @@ PCOA <- ggplot(D3_data_dist, aes(x = X1, y = X2, color = cols)) +
 intercative_pcao <- ggplotly(PCOA)
 print(intercative_pcao)
 Sys.sleep(3)
-# I don't understand the numbers in the axes but it is the same result than the plot above but interactive
 
 ###########################################################################################################
 # line chart: evolution elevation distribution of the two species overtime
